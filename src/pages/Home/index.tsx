@@ -56,7 +56,7 @@ const Home =()=> {
         
       </StyledSection>
 
-      <StyledSection>
+      <StyledSection style={{flexGrow: 1}}>
         <div className='space-flex'>
           <DropDown
             options={programOptions}
@@ -65,8 +65,8 @@ const Home =()=> {
           />
 
           <StyledToolsBar>
-            <Tag />
-            <Envelope />
+            <Tag size={24}/>
+            <Envelope size={24} />
 
             <Button color="blue" hoverColor="skyBlue">
               Move to Video interview

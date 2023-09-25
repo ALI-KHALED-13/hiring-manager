@@ -5,6 +5,7 @@ interface PlaceholderProps {
 }
 
 export const StyledPlaceHolder = styled.div<PlaceholderProps>`
+  user-select: none;
   width: ${({size})=> size == "m"? 10 : 4 }rem;
   height: ${({size})=> size == "m"? 10 : 4 }rem;
   padding: ${({size})=> size == "m"? 3 : 1 }rem;

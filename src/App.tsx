@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 function App() {
 
   return (
-    <BrowserRouter basename="/hiring-manager">
+    <BrowserRouter /* basename="/hiring-manager" */>
       <>
         <NavMenu />
         <Routes>

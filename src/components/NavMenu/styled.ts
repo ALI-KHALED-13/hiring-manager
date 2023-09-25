@@ -15,7 +15,9 @@ export const StyledNavMenu = styled.nav`
   justify-content: space-between;
   
   ${mediaQuery("lg")}{
-    position: static;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     flex-flow: column nowrap;
     width: unset;
   }

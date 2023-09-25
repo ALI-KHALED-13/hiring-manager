@@ -5,7 +5,7 @@ export const menuLinks = {
     {
       title: 'home',
       icon: 'House',
-      href: '/home',
+      href: '/',
     },
     {
       title: 'users',

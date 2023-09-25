@@ -4,11 +4,13 @@ import { mediaQuery } from "../../utils/mediaQuery";
 
 
 export const StyledPageCotainer = styled.main`
-  padding: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
   ${mediaQuery('lg')}{
     padding: 3rem;
-    display: flex;
-    gap: 3.2rem;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -39,4 +41,5 @@ export const StyledToolsBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.8rem;
 `;
