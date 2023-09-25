@@ -1,24 +1,12 @@
 import styled, { css } from "styled-components";
-import { setStyledSemiBoldParagraph } from "../Typo";
 
 interface StyledCheckboxProps {
   isChecked: boolean;
   disabled?: boolean;
 }
-interface StyledLabelProps {
-  disabled?: boolean;
-}
 
 
-export const StyledLabel = styled.label<StyledLabelProps>`
-  ${setStyledSemiBoldParagraph()}
-  cursor: pointer;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: ${({theme , disabled})=> disabled ? theme.gray : theme.navy};
-`;
+
 
 export const StyledCheckbox = styled.div<StyledCheckboxProps>`
   width: 1.8rem;

@@ -1,31 +1,23 @@
 import { Check } from "@phosphor-icons/react";
-import { StyledCheckbox, StyledLabel } from "./styled";
-import Tag from "../Tag";
+import { StyledCheckbox, } from "./styled";
+
 
 interface CheckboxProps {
   option: IOption;
   onChange: Function;
   isChecked: boolean;
-  shape?: string;
   disabled?: boolean;
 }
 
 const Checkbox =({
   option,
   onChange,
-  shape = "checkbox",
   isChecked,
   disabled
 }: CheckboxProps)=> {
   
 
-  return shape === "tag"? (
-    <Tag
-      isChecked={isChecked}
-      option={option}
-      onChange={onChange}
-    />
-  ):(
+  return (
     <>
       <input
         type="checkbox"
@@ -34,10 +26,7 @@ const Checkbox =({
         onChange={()=> !disabled && onChange(option, isChecked)}
         style={{display: "none"}}
       />
-      <StyledLabel
-        disabled={disabled}
-        htmlFor={option.value}
-      >
+      <label htmlFor={option.value}>
         <StyledCheckbox
           isChecked={isChecked}
           disabled={disabled}
@@ -46,12 +35,11 @@ const Checkbox =({
             <Check
               weight="bold"
               color="white"
-              size={17}
+              size={18}
               style={{flexShrink: 0}}
             />}
         </StyledCheckbox>
-        {option.display}
-      </StyledLabel>
+      </label>
     </> 
   )
 }
