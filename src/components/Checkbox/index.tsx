@@ -3,14 +3,14 @@ import { StyledCheckbox, } from "./styled";
 
 
 interface CheckboxProps {
-  option: IOption;
+  optionVal: string;
   onChange: Function;
   isChecked: boolean;
   disabled?: boolean;
 }
 
 const Checkbox =({
-  option,
+  optionVal,
   onChange,
   isChecked,
   disabled
@@ -21,12 +21,12 @@ const Checkbox =({
     <>
       <input
         type="checkbox"
-        id={option.value}
-        value={option.value}
-        onChange={()=> !disabled && onChange(option, isChecked)}
+        id={optionVal}
+        value={optionVal}
+        onChange={()=> !disabled && onChange(optionVal, isChecked)}
         style={{display: "none"}}
       />
-      <label htmlFor={option.value}>
+      <label htmlFor={optionVal}>
         <StyledCheckbox
           isChecked={isChecked}
           disabled={disabled}
