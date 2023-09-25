@@ -15,7 +15,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   border-radius: 1rem;
   border-style: solid;
   border-width: 2px;
-  padding: 1rem 1.6rem;
+  padding: 8px;
   text-decoration: none;
   text-transform: capitalize;
   cursor: pointer;

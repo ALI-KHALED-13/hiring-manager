@@ -51,8 +51,4 @@ export const StyledToolsBar = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
-
-  & > button {
-    padding: 8px;
-  }
 `;

@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { CaretDown, CheckCircle, Envelope, EnvelopeSimple, FileText, SpeakerHigh, Tag, User } from "@phosphor-icons/react";
+import { CaretDown, CheckCircle, EnvelopeSimple, FileText, SpeakerHigh, Tag, User } from "@phosphor-icons/react";
 import Button from "../../components/Button";
 import DropDown from "../../components/Dropdown";
 import { filtersOptions, programOptions } from "./configs";
