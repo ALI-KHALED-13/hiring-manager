@@ -51,7 +51,7 @@ export const programOptions : IOption [] = [
 
 export const filtersOptions : IOption [] = [
   {
-    display: 'Personal Info',
+    display: 'Personal Information',
     value: 'personal_info'
   },
   {

@@ -23,17 +23,26 @@ export const StyledSection = styled.section`
   min-width: 25%;
 `;
 
+export const StyledPageHeader = styled.h1`
+  color: ${({theme})=> theme.blue};
+  font-size: 2rem;
+  font-weight: 600;
+
+`;
 
 export const StyledFiltersContainer = styled.aside`
   background-color: ${({theme})=> theme.white};
   padding: 1.5rem;
+  & > .space-flex {
+    padding: 1.8rem 0 ;
+  }
 `;
 
 export const FilterItem = styled.li`
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 1rem 0;
+  padding: 1.8rem 0;
   border-top: 1px solid ${({theme})=> theme.lightGray};
 `;
 
@@ -42,4 +51,8 @@ export const StyledToolsBar = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
+
+  & > button {
+    padding: 8px;
+  }
 `;

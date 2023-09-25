@@ -78,7 +78,6 @@ export const TextInput =({
         {DisplayIcon && (
           <DisplayIcon
             size={26}
-            weight="bold"
             {...(icon.props? icon.props : {})}
           />
         )}

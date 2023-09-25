@@ -52,7 +52,7 @@ export const StyledMenuListItem = styled.li<MenuListItemProps>`
   background-color: ${({theme, $isActive})=> $isActive? theme.lightBlue : 'inherit'};
   transition: background-color 0.3s ease-in-out;
   & svg {
-      fill: ${({theme, $isActive}) => $isActive? theme.blue : 'initial'};
+      fill: ${({theme, $isActive}) => $isActive? theme.blue : theme.gray};
       transition: fill 0.3s ease-in-out;
   }
   &:hover {
@@ -65,7 +65,7 @@ export const StyledMenuListItem = styled.li<MenuListItemProps>`
 `;
 
 export const StyledLogo = styled.div`
-  background-color: ${({theme})=> theme.gray};
+  background-color: ${({theme})=> theme.shadowGray};
   width: 3rem;
   height: 3rem;
   border-radius: 50%;

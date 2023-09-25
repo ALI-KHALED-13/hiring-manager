@@ -90,7 +90,7 @@ const DropDown =({
                 {option.display}
 
                 {option.count && (
-                  <span>{option.count}</span>
+                  <span className='count'>{option.count}</span>
                 )}
               </StyledOption>
             )})

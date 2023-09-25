@@ -11,21 +11,14 @@ export const colors = {
   grayishBlue: '#D7E5FD',
   skyBlue: '#B1CDFD',
   whitishGray: '#F9FAFF',
+  shadowGray: '#373F6859',
+  green: '#037092',
+  lightGreen: '#F3FAFC',
   ///
-  red: '#D73737',
-  lightRed: '#E98888',
-  peach: '#F49F85',
-  darkViolet: '#7400A6',
-  violet: '#AD1FEA',
-  lightViolet: '#C75AF6',
-  whitishViolet: '#FADDFF',
-  
-  
   spaceNavy: '#373F68',
   navy: '#3A4374',
   lightNavy: '#656EA3',
   transparentGray: '#8C92B33F',
-  shadowGray: '#373F6859',
   
 };
 

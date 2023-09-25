@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { CaretDown, Envelope, FileText, Tag } from "@phosphor-icons/react";
+import { CaretDown, CheckCircle, Envelope, EnvelopeSimple, FileText, SpeakerHigh, Tag, User } from "@phosphor-icons/react";
 import Button from "../../components/Button";
 import DropDown from "../../components/Dropdown";
 import { filtersOptions, programOptions } from "./configs";
@@ -8,7 +8,8 @@ import {
   StyledFiltersContainer,
   StyledSection,
   StyledPageCotainer,
-  StyledToolsBar
+  StyledToolsBar,
+  StyledPageHeader
 } from "./styled";
 import { TextInput } from "../../components/TextInputs";
 import CardsListing from '../../components/CardsListing';
@@ -24,19 +25,19 @@ const Home =()=> {
     <StyledPageCotainer>
       <StyledSection>
         <header>
-          <h1>London Internship Program</h1>
+          <StyledPageHeader>London Internship Program</StyledPageHeader>
           <p>London</p>
         </header>
         <TextInput
           type="search"
-          icon={{name: "MagnifyingGlass"}}
+          icon={{name: "MagnifyingGlass", props: {color: 'gray'}}}
           onChange={(ev)=> setSearchText(ev.target.value)}
           value={searchText}
           placeholder="Serach by name, edu, exp or #tag"
         />
         <StyledFiltersContainer>
-          <div className='space-flex'>
-            <h3>filters</h3>
+          <div className='space-flex' >
+            <h3>Filters</h3>
             <span> 0 selected </span>
           </div>
 
@@ -65,8 +66,22 @@ const Home =()=> {
           />
 
           <StyledToolsBar>
-            <Tag size={24}/>
-            <Envelope size={24} />
+            <Button color="white">
+              <Tag size={20}/>
+            </Button>
+
+            <Button color="white">
+              <User size={20} color="tomato"/>
+            </Button>
+            <Button color="white">
+              <CheckCircle size={20} />
+            </Button>
+            <Button color="white">
+              <SpeakerHigh size={20} />
+            </Button>
+            <Button color="white">
+              <EnvelopeSimple size={20} />
+            </Button>
 
             <Button color="blue" hoverColor="skyBlue">
               Move to Video interview

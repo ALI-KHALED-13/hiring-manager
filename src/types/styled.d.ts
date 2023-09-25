@@ -12,18 +12,14 @@ declare module 'styled-components' {
     grayishBlue: string;
     skyBlue: string;
     whitishGray: string;
+    shadowGray: string;
+    green: string;
+    lightGreen: string;
     ////
-    red: string;
-    lightRed: string;
-    peach: string;
-    darkViolet: string;
-    violet: string;
-    lightViolet: string;
-    whitishViolet: string;
     spaceNavy: string;
     navy: string;
     lightNavy: string;
     transparentGray: string;
-    shadowGray: string;
+    
   }
 }

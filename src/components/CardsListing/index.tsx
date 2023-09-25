@@ -2,7 +2,7 @@ import {useState} from 'react';
 import PFPPlaceHolder from "../PFPPlaceHolder";
 import Tag from "../Tag";
 import { candidates } from "./config";
-import { StyledCandidateCard, StyledCandidateData, StyledCandidateProfile, StyledCardsListing, StyledHashtag } from "./styled";
+import { StyledCandidateCard, StyledCandidateData, StyledCandidateProfile, StyledCardsListing, StyledHashtag, StyledListingHeader, StyledTagsContainer } from "./styled";
 import CheckboxInput from '../CheckboxInput';
 
 
@@ -19,12 +19,19 @@ const CardsListing =()=> {
     }
   }
 
+  const areAllCandsChecked = checkedCands.length === candidates.length;
+
   return (
     <StyledCardsListing>
-      <div>
-        <h3>244 candidates</h3>
-        <div>tabs</div>
-      </div>
+      <StyledListingHeader>
+        <CheckboxInput
+          optionVal='all'
+          isChecked={areAllCandsChecked}
+          onChange={()=> setCheckedCands(areAllCandsChecked? [] : candidates.map(cand=> cand._id))}
+        />
+        <h2>247 candidates</h2>
+        <div style={{marginLeft: 'auto'}}>tabs</div>
+      </StyledListingHeader>
       <ul>
         {candidates.map(cand=> (
           <StyledCandidateCard key={cand._id}>
@@ -36,13 +43,15 @@ const CardsListing =()=> {
             <StyledCandidateProfile >
               <PFPPlaceHolder fullName={cand.fullname} size="m"/>
               <StyledCandidateData>
-                <h3>{cand.fullname}</h3>
+                <h3 style={{fontWeight: 600}}>
+                  {cand.fullname}
+                </h3>
                 <p>{cand.location}</p>
                 <p>{cand.edu}</p>
-                <div>
+                <StyledTagsContainer>
                   {cand.hashtags.map(hash=> <StyledHashtag key={cand.fullname + hash}>{hash}</StyledHashtag>)}
-                </div>
-                <div>
+                </StyledTagsContainer>
+                <StyledTagsContainer>
                   {cand.tags.map(hash=> (
                     <Tag
                       key={cand.fullname + hash}
@@ -51,7 +60,7 @@ const CardsListing =()=> {
                     />
                     )
                   )}
-                </div>
+                </StyledTagsContainer>
               </StyledCandidateData>
             </StyledCandidateProfile>
           </StyledCandidateCard>

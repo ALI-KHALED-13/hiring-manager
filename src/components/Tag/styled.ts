@@ -22,13 +22,15 @@ export const StyledTag = styled.div<StyledTagsProps>`
 `;
 
 export const StyledLabel = styled.label`
-  padding: 0.6rem 1.6rem;
+  padding: 2px 10px;
   border: none;
   border-radius: 1rem;
-  background-color: ${({theme}) => theme.lightGray};
-  color: ${({theme}) => theme.blue};
+  background-color: ${({theme}) => theme.lightGreen};
+  color: ${({theme}) => theme.green};
   text-transform: capitalize;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
 
   @media (hover: hover) { // for devices supporting hover
     &:hover {
